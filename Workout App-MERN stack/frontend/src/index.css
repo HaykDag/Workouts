@@ -1,0 +1,433 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+header{
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(234, 229, 222);
+  z-index: 100;
+  height: 130px;
+}
+header h1{
+  margin-left:25px;
+  color: #45a74b;
+}
+header button{
+  margin-right: 15px;
+}
+header a{
+  text-decoration: none;
+}
+.home{
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  gap: 100px;
+  padding: 0px 100px;
+  
+}
+.workouts{
+  max-width: 1000px;
+}
+.workout-details{
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0,0.05);
+}
+.workout-details-public{
+  background-color: #fff;
+  border-radius: 4px;
+  max-width: 250px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0,0.05);
+}
+.workout-details h3{
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  background-color: #1aac83;
+  color: #fff;
+}
+.workout-details-public h3{
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  background-color: #1aac83;
+  color: #fff;
+}
+.workout-details h4{
+ margin: 0 0 10px 0;
+ font-size: 1.2em;
+ color: #1aac83; 
+}
+.workout-details-public h4{
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #1aac83; 
+ }
+.workout-details p{
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details-public p{
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.comments{
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+  cursor: pointer;
+}
+.comment-input{
+  max-height: 20px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #5555557e;
+}
+.comment-text{
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.likes{
+  color: #1aac83;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+.likes span{
+  color: #e7195a;
+}
+.like-list{
+  border: 1px solid #1aac83b0;
+  background-color: rgba(240, 248, 255, 0.592);
+}
+.delete-btn{
+  position: absolute;
+  width: 15px;
+  top: 30px;
+  right: 10px;
+  background-color: rgba(207, 13, 13, 0.681);
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.delete-btn-public{
+  position: absolute;
+  width: 15px;
+  top: 80px;
+  right: 20px;
+  background-color: rgba(207, 13, 13, 0.681);
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.edit-btn{
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 15px;
+  background-color: #fff;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+.edit-btn-public{
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  width: 15px;
+  background-color: #fff;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+label,input{
+  display: block;
+}
+input{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button{
+  background-color: #1aac83;
+  border: 0;
+  color: #fff;
+  margin:3px;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error{
+  padding: 10px;
+  background-color: #ffefef;
+  border: 1px solid rgb(223, 75, 75);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error{
+  border: 1px solid #e7195a;
+}
+.edit-form input{
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.edit-form button{
+  background-color: #1aac83;
+  border: 0;
+  color: #fff;
+  margin: 3px auto;
+  max-width: 70px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.unlike-btn{
+  margin-right: 7px;
+  width: 30px;
+}
+.like-btn{
+  margin-right: 7px;
+  width: 20px;
+  height: 20px;
+  background-color: #1aac83;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+nav{
+  display: flex;
+  align-items: center;
+  
+}
+nav a{
+  margin: 0px 5px;
+  text-decoration: none;
+  color: #1aac83;
+}
+form.signup,form.login{
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+nav button{
+  background-color: #fff;
+  color: #1aac83;
+  border: 2px solid #1aac83;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left:10px;
+}
+.edit-form{
+  max-width: 700px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+.public-label{
+ display:inline;
+ background-color: #1aac83;
+}
+.public-check{
+  display:inline;
+  width: 55px;
+  margin-left: 15px;
+  border: 1px solid #1aac83;
+}
+.edit-cnt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.edit-cnt label{
+  color: #000000;
+}
+.edit-cnt input{
+  width: 10%;
+  margin-left: 5px;
+}
+.user-cnt{
+  background-color: rgb(35, 36, 36);
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.status{
+  color: #11c420;
+  font-style: italic;
+}
+.status-edit-btn{
+color: #b1aeae;
+width: 15px;
+margin-left:25px
+}
+.user-name{
+  font-size: 2.5em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #1aac83;
+  user-select: none;
+}
+.friend-req{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-req button{
+  width: 75px;
+  font-size: 7px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.edit-account-cnt{
+  background-color: #eef74f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  top: 150px;
+  border: none;
+  border-radius: 5px;
+}
+.edit-account-cnt p{
+  margin: 0;
+  cursor: pointer;
+  color: rgb(44, 34, 46);
+  font-weight: 500;
+  user-select: none;
+}
+.edit-icon{
+  margin-right:5px;
+  color: rgb(110, 108, 108);
+}
+.sidenav {
+  max-height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 250px;
+  right: 0;
+  background-color: rgb(234, 229, 222);
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 0px;
+  border: 1px solid white;
+}
+.openbtn{
+  position: absolute;
+  background-color: #11c420;
+  bottom: 0px;
+  top: 0px;
+  left: 0;
+  border: none;
+  user-select: none;
+}
+
+.closebtn {
+  position: absolute;
+  background-color: #e7195a;
+  bottom: 0px;
+  top: 0px;
+  left: 0;
+  border: none;
+  user-select: none;
+}
+.no-friends{
+  margin-left:65px;
+  justify-content: center;
+}
+.friendsList{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+.friendsList a{
+  text-decoration: none;
+  cursor: pointer;
+  margin: 2px;
+}
+.friendReq{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  border: 1px solid #57955c;
+}
+.friendReq p{
+  margin: 0px;
+  font-size: 14px;
+}
+.friendReq a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #084f0d;
+}
+.friendReq2{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.friendReq2 span{
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.friendReq2 span:hover{
+  color: red;
+  transition: 0.3s;
+  font-size: 2em;
+}
+button:disabled{
+  background-color: #6c726c70;
+  cursor: auto;
+}
+
+ 
